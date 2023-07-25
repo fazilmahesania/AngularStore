@@ -4,7 +4,9 @@ A simple and user-friendly online store application built using Angular, providi
 **Technical Stack:**
 
 **Angular:** The frontend of the application is built entirely with Angular, utilizing its powerful features and components for creating a dynamic and interactive user interface.
+
 **Bootstrap:** The project leverages Bootstrap CSS framework to ensure a clean and modern design, enabling a visually appealing and mobile-friendly layout.
+
 **JSON Server:** For the initial development phase, a JSON server is used as a mock backend to simulate data and API calls, providing a real-world shopping experience.
 
 **Contribution Guidelines:**
