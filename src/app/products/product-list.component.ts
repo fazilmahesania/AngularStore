@@ -50,7 +50,9 @@ export class ProductListComponent implements OnInit, OnDestroy {
         });
     }
     ngOnDestroy() {
+        if (this.sub) {
         this.sub.unsubscribe();
+        }
     }
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message + ' Rating';

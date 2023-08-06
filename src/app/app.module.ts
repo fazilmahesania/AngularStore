@@ -14,11 +14,12 @@ import { WelcomeComponent } from './home/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
+    WelcomeComponent,
     ProductListComponent,
     ConvertToSpacesPipe,
     StarComponent,
-    ProductDetailComponent,
-    WelcomeComponent
+    ProductDetailComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { WelcomeComponent } from './home/welcome.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'products', component: ProductListComponent },
-      { path: 'prodcuts/:id', component: ProductDetailComponent },
+      { path: 'products/:id', component: ProductDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
@@ -34,8 +35,8 @@ import { WelcomeComponent } from './home/welcome.component';
 
     ])
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  
+  bootstrap: [AppComponent] 
 
 })
 export class AppModule { }
