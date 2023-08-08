@@ -1,8 +1,27 @@
 <div class='card'>
     <div class='card-header'>
-        {{pageTitle + ': '+ product?.productName}}
+        {{pageTitle}}
     </div>
+    <div class="card-body"  *ngIf="product">
 
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Name: </strong>{{ product.productName }}</li>
+                    <li class="list-group-item"><strong>Code: </strong>{{product.productCode | lowercase | convertToSpaces:'-'}}</li>
+                    <li class="list-group-item"><strong>Available: </strong>{{product.releaseDate}}</li>
+                    <li class="list-group-item"><strong>Price: </strong>{{product.price | currency:'USD':'symbol':'1.2-2'}}</li>
+                    <li class="list-group-item"><strong>Rating: </strong><pm-star [rating]='product.starRating'
+                        (ratingClicked)='onRatingClicked($event)'
+                        ></pm-star></li>
+                  </ul>
+            </div>
+            <div class="col-md-6" [style.text-align]="alignCenter">
+                <img [src]='product.imageUrl' [title]='product.productName'
+                [style.width.%]='imageWidth' [style.margin.px]='imageMargin'>
+            </div>
+        </div>
+    </div>
     <div class='card-footer'>
         <button class='btn btn-outline-secondary'
                 style='width:80px'

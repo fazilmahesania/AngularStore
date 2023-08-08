@@ -1,5 +1,6 @@
 .crop{
     overflow: hidden;
+    display: inline-grid;
 }
 
 div {
